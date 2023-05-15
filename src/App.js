@@ -6,15 +6,39 @@ import { CreateTodoButton } from "./components/CreateTodoButton/CreateTodoButton
 import { useState } from "react";
 
 //control + spacio en mac para importar ese componente
-const defaultTodos = [
-  { text: "Tarea test 1", completed: false },
-  { text: "Tarea test 2W", completed: true },
-  { text: "Tarea test 3", completed: false },
-  { text: "Tarea test 4", completed: false },
-];
+
+function useLocalStorage(itemName, initialValue) {
+  
+
+  const localStorageItems = localStorage.getItem(itemName);
+
+  let parsedItem;
+
+  if (localStorageItems) {
+    parsedItem = JSON.parse(localStorageItems);
+  } else {
+    parsedItem = initialValue;
+    localStorage.setItem(itemName, JSON.stringify(initialValue));
+  }
+
+  const [item, setItem] = useState(parsedItem);
+
+  const saveItem = (newItem) => {
+    setItem(newItem);
+    localStorage.setItem(itemName, JSON.stringify(newItem));
+  };
+
+  return [
+    item,
+    saveItem
+    
+  ]
+}
+
 function App() {
   const [searchValue, setSearchValue] = useState("");
-  const [todos, setTodos] = useState(defaultTodos);
+
+  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
 
   const completedTodos = todos.filter((todo) => todo.completed).length;
   const totalTodos = todos.length;
@@ -26,14 +50,14 @@ function App() {
 
   const onDelete = (text) => {
     const newTodos = todos.filter((todo) => todo.text !== text);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
 
   const onComplete = (text) => {
     const todoIndex = todos.findIndex((todo) => todo.text === text);
     const newTodos = [...todos];
     newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
 
   return (
@@ -49,7 +73,7 @@ function App() {
             text={todo.text}
             completed={todo.completed}
             onComplete={() => onComplete(todo.text)}
-            onDelete={ () => onDelete(todo.text)}
+            onDelete={() => onDelete(todo.text)}
           />
         ))}
       </TodoList>
