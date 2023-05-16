@@ -23,7 +23,7 @@ function useLocalStorage(itemName, initialValue) {
         setError(true);
         setLoading(false);
       }
-    }, 90000);
+    }, 1000);
   }, []);
 
   const saveItem = (newItem) => {
@@ -38,5 +38,19 @@ function useLocalStorage(itemName, initialValue) {
     error,
   };
 }
+
+//localStorage.removeItem('TODOS_V1')
+/*
+const defaultTodos = [
+  { text: 'Tarea test 1', completed: true },
+  { text: 'Tarea test 2', completed: true },
+  { text: 'Tarea test 3', completed: false },
+  { text: 'Tarea test 4', completed: true },
+  { text: 'Tarea test 5', completed: false },
+  { text: 'Tarea test 6W', completed: true },
+]
+*/
+
+//
 
 export { useLocalStorage };
