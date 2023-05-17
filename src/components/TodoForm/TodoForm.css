@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(32, 32, 32, 0.849);
+  width: 50%;
+  padding: 40px;
+  border-radius: 5px;
+  max-width: 600px;
+}
+
+label {
+  color: rgb(236, 236, 236);
+  font-family: "Roboto Mono", monospace;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 70%;
+  height: 150px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.TodoForm-ButtonCotainer {
+  margin-top: 20px;
+}
+
+.TodoForm-button {
+  background: transparent;
+  border: none;
+}
+
+.TodoForm-button--add {
+  color: rgba(0, 128, 0, 0.89);
+  margin-left: 40px;
+}
+
+.TodoForm-button--cancel {
+  color: red;
+  margin-right: 40px;
+}

@@ -5,6 +5,7 @@ const TodoContext = createContext();
 
 function TodoProvider({ children }) {
   const [searchValue, setSearchValue] = useState("");
+  const [openModal, setOpenModal] = useState(false)
 
   const {
     item: todos,
@@ -45,6 +46,8 @@ function TodoProvider({ children }) {
         setSearchValue,
         loading,
         error,
+        openModal,
+        setOpenModal,
       }}
     >
       {children}
