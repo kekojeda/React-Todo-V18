@@ -5,7 +5,7 @@ const TodoContext = createContext();
 
 function TodoProvider({ children }) {
   const [searchValue, setSearchValue] = useState("");
-  const [openModal, setOpenModal] = useState(false)
+  const [openModal, setOpenModal] = useState(false);
 
   const {
     item: todos,
@@ -34,6 +34,48 @@ function TodoProvider({ children }) {
     saveTodos(newTodos);
   };
 
+  function addTodo(newTodoValue) {
+    let newTodo = { text: newTodoValue, completed: false };
+    const newTodos = [...todos];
+    newTodos.push(newTodo);
+    saveTodos(newTodos);
+  }
+
+  function titleMsg(todosTotales, todosCompletados) {
+    let msj;
+    if (todosTotales > todosCompletados) {
+      msj = (
+        <h1 className="TodoCounter">
+          ¡Vas por buen camino!
+          <br />
+          Has completado <span>{completedTodos} </span> de{" "}
+          <span>{totalTodos} </span> tareas.
+        </h1>
+      );
+    }
+    if(todosTotales > 0 && todosTotales === todosCompletados){
+      msj = (
+        <h1 className="TodoCounter">
+          Has completado todas tus tareas pendientes.
+          <br />
+          ¡Buen trabajo! 
+        </h1>
+      )
+    }if(todosTotales === 0){
+      msj = (
+        <h1 className="TodoCounter">
+          ¡Bienvenido! 
+          <br />
+          Parece que aún no tienes tareas pendientes.
+          
+        </h1>
+      )
+
+    }
+
+    return msj;
+  }
+
   return (
     <TodoContext.Provider
       value={{
@@ -48,6 +90,8 @@ function TodoProvider({ children }) {
         error,
         openModal,
         setOpenModal,
+        addTodo,
+        titleMsg,
       }}
     >
       {children}

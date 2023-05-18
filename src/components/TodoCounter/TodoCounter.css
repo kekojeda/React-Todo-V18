@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+
 .TodoCounter {
   font-size: 24px;
   text-align: center;
   margin: 0;
   padding: 48px;
   font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto Mono", monospace;
 }
 .TodoCounter span {
   font-weight: 700;

@@ -37,11 +37,11 @@ textarea {
 }
 
 .TodoForm-button--add {
-  color: rgba(0, 128, 0, 0.89);
+  color: rgba(255, 255, 255, 0.89);
   margin-left: 40px;
 }
 
 .TodoForm-button--cancel {
-  color: red;
+  color: rgb(255, 255, 255);
   margin-right: 40px;
 }
