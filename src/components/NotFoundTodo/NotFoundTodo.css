@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+
+.not-found-todo {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 48px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto Mono", monospace;
+}

@@ -92,6 +92,7 @@ function TodoProvider({ children }) {
         setOpenModal,
         addTodo,
         titleMsg,
+        todos,
       }}
     >
       {children}

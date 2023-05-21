@@ -11,6 +11,7 @@ import { useContext } from "react";
 import { Modal } from "../Modal/Modal";
 import { TodoForm } from "../TodoForm/TodoForm";
 import "./App.css";
+import { NotFoundTodo } from "../NotFoundTodo/NotFoundTodo";
 
 function AppUI() {
   const {
@@ -21,6 +22,7 @@ function AppUI() {
     error,
     openModal,
     setOpenModal,
+    todos,
   } = useContext(TodoContext);
 
   return (
@@ -31,7 +33,9 @@ function AppUI() {
         <TodoList>
           {loading && <TodosLoading />}
           {error && <TodosError />}
-          {!loading && searchedTodos.length === 0 && <EmptyTodos />}
+          {!loading && searchedTodos.length === 0 && todos.length === 0 && <EmptyTodos />}
+          {!loading && searchedTodos.length === 0 && todos.length > 0 && <NotFoundTodo />}
+          
           {searchedTodos.map((todo) => (
             <TodoItem
               key={todo.text}
