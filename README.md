@@ -1,75 +1,51 @@
-# Repositorio base del Curso de Introducción a React.js en Platzi
+# Task List
 
-¡Hola, Platzinauta!
+This project is a task list application that allows you to create, delete, and mark tasks as complete or incomplete. The tasks are saved in the browser's local storage.
 
-En este repositorio encontrarás el código de todas las clases del [Curso de Introducción a React.js](https://platzi.com/reactjs). Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
+## Live Demo
 
-La rama principal contiene el código con el que eempezamos el curso. En las demás ramas encontrarás el código de las siguientes clases y finalmente el deploy de la aplicación.
+You can see a live demo of the project [here](https://kekojeda.github.io/React-Todo-V18/).
 
-¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
+## Technologies Used
 
-## Getting Started with Create React App
+- React
+- JavaScript
+- HTML
+- CSS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installation Instructions
 
-## Available Scripts
+1. Clone the repository with the following command:
+```
+git clone git@github.com:kekojeda/React-Todo-V18.git
+```
 
-In the project directory, you can run:
+2. Navigate to the project directory:
+```
+cd React-Todo-V18
+```
 
-### `npm start`
+3. Install the project dependencies:
+```
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Start the application:
+```
+npm start
+```
 
-### `npm run build`
+## Usage Instructions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. To add a task, click on the "+" icon located at the bottom right of the page. Enter the task name in the text field and then press the "Check" icon.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. To mark a task as complete, use the "Check" icon next to each task in the list. To delete a task, use the "Trash" icon .
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Author
 
-### `npm run eject`
+Sergio Ojeda
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy your Task List project! If you have any questions, feel free to contact me.
